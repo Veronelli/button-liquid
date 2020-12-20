@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="#">
+
+        <p>Home</p>
+        <div class="liquid">
+        </div>
+
+    </a>
+
+</body>
+
+<style>
+
+    *{
+
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+
+        background: #333333;
+
+    }
+    a{
+
+        position: relative;
+        display: table;
+        margin: 10rem auto;
+        text-decoration: none;
+        background: rgb(214, 12, 62);
+        box-shadow: 0px 0px 10px white;
+        border-radius: 10px;
+        padding: 8px 16px;
+        overflow: hidden;
+
+    }
+    a>p{
+
+        position: relative;
+        font-size: 1.5rem;
+        color: #cccccc;
+        z-index: 6;
+
+    }
+    .liquid{
+        position: absolute;
+        top: -3rem;
+        left: -2rem;
+        display: block;
+        width: 9rem;
+        height: 9rem;
+        background: #333333;
+        border-radius: 40%;
+        z-index: 2;
+        box-shadow: -5px 5px 1px rgba(0, 0, 0, 0.603);
+        transition: top 1s, transform 2s ease-in-out;
+    }
+    a:hover>.liquid{
+
+        top: -8rem;
+        transform: rotateZ(360deg);
+        animation: move 5s linear infinite;
+
+    }
+    @keyframes move{
+
+        0%{
+
+            transform: rotateZ(0deg);
+
+        }
+        100%{
+
+
+            transform: rotateZ(360deg);
+
+        }
+
+    }
+
+
+</style>
+</html>
